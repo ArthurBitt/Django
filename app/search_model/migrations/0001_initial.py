@@ -12,12 +12,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Item',
+            name='Book',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=60)),
-                ('price', models.FloatField()),
-                ('quantity', models.IntegerField()),
+                ('titulo', models.CharField(max_length=255)),
             ],
         ),
     ]

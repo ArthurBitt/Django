@@ -21,6 +21,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'app.search_model',
     'app.form_model',
     'app.model_pagination',
     'django.contrib.admin',

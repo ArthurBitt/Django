@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Card com Bootstrap</title>
+    <!-- Inclua o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <style>
+        /* Estilo para alinhar os cards lado a lado */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Espaço entre os cards */
+            gap: 16px; /* Espaço entre cards */
+        }
+    </style>
+
+</head>
+<body>
+
+<div class=" container card-container">
+    {% for book in books %}
+<div class="card text-bg-danger mb-4" style="max-width: 18rem;">
+    <img src="{{ book.thumbnail }}" style="max-width: 18rem" alt="" >
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">{{book.title}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+    {% endfor %}
+    </div>
+
+<!-- Inclua o Bootstrap JS e as dependências do jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
