@@ -1,0 +1,36 @@
+{% extends 'form_model/partials/base.html' %}
+
+{% block title %}
+    <title>Dashboard</title>
+{% endblock title %}
+
+
+{% block navbar %}
+
+    <nav class="navbar bg-body-tertiary bg-dark border-bottom border-body">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><img style="max-height: 100px; max-width: 100px; border-radius: 2rem " src="{{ user.profile.profile_image.url }}" alt=""></span>
+            
+            <div>
+                <a class="nav-link active text-danger" aria-current="page" href="#">Logout</a>
+            </div>
+
+        </div>
+
+    </nav>
+    </nav>
+{% endblock navbar %}
+
+{% block body %}
+    {% include 'form_model/partials/alerts.html' %}
+    <div class="d-flex justify-content-center align-items-center " style="min-height: 100vh; padding: 1rem;">
+        <div class=" card border-success mb-3 " style="max-width: 40rem; min-height: 20rem; flex-flow: column; margin: 0 auto;">
+            <div class="card-header text-success" style="background-color:transparent; text-align: center">Logado</div>
+            <div class="card-body text-success ">
+                <h5 class="card-title">Olá, {{ user }}</h5>
+                <p class="card-text"> Backend Developer</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

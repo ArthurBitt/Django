@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ITEM
+
+
+
+        <div>{{ item.name }}</div>
+        <div>{{ item.price }}</div>
+        <div>{{ item.quantity}}</div>
+       
+
+<a href="{% url 'delete_item' item.id %}" type="button" class="btn-danger">Delete</a>
+<a href="{% url 'edit_item' item.id %}" type="button" class="btn-primary">Edit</a>
+</body>
+</html>
