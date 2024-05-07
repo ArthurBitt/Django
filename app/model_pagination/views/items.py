@@ -30,7 +30,7 @@ def edit_item(request, item_id):
 
 def update_item(request):
     if request.method == 'POST':
-        # pegou no form_model name
+        # pegou no authentication_model name
         item_id = request.POST.get('item_id')
         # filtrou objeto
         item = get_object_or_404(Item, pk=item_id)

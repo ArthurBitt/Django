@@ -1,4 +1,4 @@
-{% extends 'form_model/partials/base.html' %}
+{% extends 'authentication_model/partials/base.html' %}
 
 {% block title%}
 <title>Sign in</title>
@@ -7,7 +7,7 @@
 {% block body %}
     <div class="container mt-5">
     <h2>Formulário de Cadastro</h2>
-        {% include 'form_model/partials/alerts.html' %}
+        {% include 'authentication_model/partials/alerts.html' %}
     <form method="POST">
         {% csrf_token %}
         <!-- Campo para o Nome -->

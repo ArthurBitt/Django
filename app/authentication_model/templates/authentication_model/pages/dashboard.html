@@ -1,4 +1,4 @@
-{% extends 'form_model/partials/base.html' %}
+{% extends 'authentication_model/partials/base.html' %}
 
 {% block title %}
     <title>Dashboard</title>
@@ -22,7 +22,7 @@
 {% endblock navbar %}
 
 {% block body %}
-    {% include 'form_model/partials/alerts.html' %}
+    {% include 'authentication_model/partials/alerts.html' %}
     <div class="d-flex justify-content-center align-items-center " style="min-height: 100vh; padding: 1rem;">
         <div class=" card border-success mb-3 " style="max-width: 40rem; min-height: 20rem; flex-flow: column; margin: 0 auto;">
             <div class="card-header text-success" style="background-color:transparent; text-align: center">Logado</div>

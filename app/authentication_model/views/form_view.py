@@ -41,7 +41,7 @@ def login(request):
 
     return render(
         request=request,
-        template_name='form_model/pages/login.html'
+        template_name='authentication_model/pages/login.html'
 )
 
 def logout(request):
@@ -77,7 +77,7 @@ def signin(request):
 
     return render(
         request=request,
-        template_name='form_model/pages/signin.html'
+        template_name='authentication_model/pages/signin.html'
     )
 
 @login_required
@@ -86,6 +86,6 @@ def dashboard(request):
 
     return render(
         request=request,
-        template_name='form_model/pages/dashboard.html',
+        template_name='authentication_model/pages/dashboard.html',
 
     )

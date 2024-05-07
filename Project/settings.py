@@ -21,7 +21,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'widget_tweaks',
+    'tempus_dominus',
     'app.search_model',
+    'app.authentication_model',
     'app.form_model',
     'app.model_pagination',
     'django.contrib.admin',
@@ -125,3 +128,5 @@ MESSAGE_TAGS = {
 
 PROJECT_ROOT = os.path.dirname(__file__)
 sys.path.insert(0, os.path.join(PROJECT_ROOT, '../app'))
+
+TEMPUS_DOMINUS_LOCALIZE = True

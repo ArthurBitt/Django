@@ -1,0 +1,23 @@
+{% extends 'authentication_model/partials/base.html' %}
+
+{% block title %}<title>Sua Compra</title>{% endblock title %}
+
+{% block body %}
+
+
+
+    <div class="mx-auto p-2 card text-bg-secondary mt-5" style="width: 20rem; ">
+
+
+        <div class="card-body">
+            <h5 class="card-title">Sua Compra</h5>
+            <p>Sua origem: {{ form.origem.value }}</p>
+            <p>Seu destino: {{ form.destino.value }}</p>
+            <p>ida: {{ form.data_ida.value }}</p>
+            <p>volta: {{ form.data_volta.value }}</p>
+        </div>
+    </div>
+
+
+
+{% endblock body %}

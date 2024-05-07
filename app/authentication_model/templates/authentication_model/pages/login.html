@@ -1,4 +1,4 @@
-{% extends 'form_model/partials/base.html' %}
+{% extends 'authentication_model/partials/base.html' %}
 
 {% block title%}
 <title>Login</title>
@@ -13,7 +13,7 @@
                 
                 <form action="{% url 'login' %}" method="POST">
                     {% csrf_token %}
-                             {% include 'form_model/partials/alerts.html' %}
+                             {% include 'authentication_model/partials/alerts.html' %}
                     <!-- Campo para o E-mail -->
                     <div class="form-group">
                

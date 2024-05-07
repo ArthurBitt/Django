@@ -1,1 +1,1 @@
-from app.form_model.views import *
+from .index_view import *

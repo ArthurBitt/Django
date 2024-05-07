@@ -1,0 +1,31 @@
+{% extends 'authentication_model/partials/base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}<title>Search</title>{% endblock title %}
+
+{% block body %}
+
+    <div class="mx-auto p-2" style="width: 200px;">
+        <h1>Passagem</h1>
+        <form action="{% url 'results' %}" method="post">
+            {% csrf_token %}
+            {% for field in form.visible_fields %}
+                <div class="form-group mt-2">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field | add_class:'form-control' }}
+                </div>
+                {% for error in field.errors %}
+                <section class="alert alert-danger" role="alert">
+                    {{ field.errors }}
+                </section>
+                {% endfor %}
+
+            {% endfor %}
+{#            {{ form }}#}
+                {{ pessoa_form }}
+            <button type="submit" class="mt-2 btn btn-danger">Search</button>
+        </form>
+    </div>
+
+
+{% endblock body %}
