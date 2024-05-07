@@ -21,6 +21,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'app.TDD_model',
     'widget_tweaks',
     'tempus_dominus',
     'app.search_model',
